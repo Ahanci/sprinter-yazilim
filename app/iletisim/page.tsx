@@ -53,6 +53,27 @@ export default function IletisimPage() {
           </div>
         </div>
       </section>
+
+      {/* GOOGLE MAPS */}
+      <section className="pb-16 md:pb-24 bg-white">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="rounded-2xl overflow-hidden border border-[var(--border)] shadow-xl">
+            <iframe
+              title="Sprinter Yazılım Konum — İstanbul"
+              src="https://maps.google.com/maps?q=Istanbul&t=&z=10&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <p className="mt-3 text-center text-xs text-[var(--muted)]">
+            İstanbul, Türkiye · Uzaktan + yerinde çalışma · Tüm Türkiye'ye hizmet
+          </p>
+        </div>
+      </section>
     </>
   );
 }

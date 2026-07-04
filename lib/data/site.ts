@@ -27,15 +27,31 @@ export const SITE = {
 } as const;
 
 /**
- * Üst gezinme başlıkları.
+ * Üst gezinme başlıkları (footer'da tam liste kullanılır).
  */
 export const NAV_LINKS = [
   { label: "Anasayfa", href: "/" },
-  { label: "E-Ticaret", href: "/e-ticaret" },
   { label: "Hizmetler", href: "/hizmetler" },
+  { label: "E-Ticaret", href: "/e-ticaret" },
   { label: "Sektörler", href: "/sektorler" },
+  { label: "Teknolojiler", href: "/teknolojiler" },
+  { label: "Referanslar", href: "/referanslar" },
   { label: "Süreç", href: "/surec" },
   { label: "Hakkımızda", href: "/hakkimizda" },
+  { label: "Blog", href: "/blog" },
   { label: "SSS", href: "/sss" },
+  { label: "İletişim", href: "/iletisim" },
+] as const;
+
+/**
+ * Header (üst bar) için sadeleştirilmiş alt küme — çok kalabalık olmasın.
+ */
+export const HEADER_NAV_LINKS = [
+  { label: "Hizmetler", href: "/hizmetler" },
+  { label: "E-Ticaret", href: "/e-ticaret" },
+  { label: "Sektörler", href: "/sektorler" },
+  { label: "Teknolojiler", href: "/teknolojiler" },
+  { label: "Referanslar", href: "/referanslar" },
+  { label: "Blog", href: "/blog" },
   { label: "İletişim", href: "/iletisim" },
 ] as const;

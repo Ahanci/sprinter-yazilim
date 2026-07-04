@@ -1022,6 +1022,283 @@ export const HIZMETLER: Hizmet[] = [
       },
     ],
   },
+  {
+    slug: "ai-telefon-asistani",
+    baslik: "AI Telefon Asistanı (Voice Agent)",
+    kategori: "ai-otomasyon",
+    ikon: "Phone",
+    kisaAciklama:
+      "Gelen telefonları yanıtlaran, doğal sesli konuşan AI asistanı. Randevu, destek ve lead filtreleme 7/24.",
+    metaTitle: "AI Telefon Asistanı | Voice Agent | Sesli AI | Sprinter",
+    metaDescription:
+      "AI telefon asistanı (voice agent): gelen çağrıları yanıtlaran, doğal sesli konuşan AI. Randevu alma, lead filtreleme, 7/24 destek. Teklif alın.",
+    anahtarKelimeler: [
+      "ai telefon asistanı",
+      "voice agent",
+      "sesli ai",
+      "ai çağrı merkezi",
+      "yapay zeka telefon",
+    ],
+    ozellikler: [
+      "Doğal sesli konuşma (Türkçe, İngilizce)",
+      "Gelen çağrıları otomatik yanıtlama",
+      "Randevu oluşturma ve CRM'e kayıt",
+      "Sık sorulan sorulara anında yanıt",
+      "İnsan temsilciye devir (gerekirse)",
+      "Çağrı sonrası özet ve transkript",
+      "Çoklu hat desteği",
+      "Analitik dashboard (çağrı sayısı, çözüm oranı)",
+    ],
+    surec: [
+      "1. Use case analizi: randevu mu destek mi?",
+      "2. Ses ve konuşma akışı tasarımı",
+      "3. Bilgi tabanı + CRM entegrasyonu",
+      "4. Test ve ses tonu ince ayarı",
+      "5. Yayın + izleme",
+    ],
+    sss: [
+      {
+        soru: "AI telefon asistanı gerçekçi mi konuşuyor?",
+        cevap:
+          "Evet. Günümüz voice agent'ları (elevenlabs, OpenAI Realtime, vb.) doğal, akıcı ve Türkçe konuşabiliyor. İnsandan ayırt edilmesi zor; gerektiğinde 'yapay zeka asistanı' olarak kendini tanıtabilir.",
+      },
+      {
+        soru: "Mevcut telefon numaramı kullanabilir miyim?",
+        cevap:
+          "Evet. Numaranız bir voice agent'a yönlendirilir; meşgul/cevapsız durumlarda veya belirli saatlerde AI devreye girer. İstediğiniz zaman insan temsilciye de aktarabilir.",
+      },
+    ],
+  },
+  {
+    slug: "rag-sistemleri",
+    baslik: "RAG Sistemleri (Bilgi Tabanlı AI)",
+    kategori: "ai-otomasyon",
+    ikon: "Database",
+    kisaAciklama:
+      "Kurum içi belgelerinizden, SSS ve ürün verisinden öğrenen, halüsinasyon riskini azaltan RAG mimarisi.",
+    metaTitle: "RAG Sistemleri | Bilgi Tabanlı AI | Vektör Arama | Sprinter",
+    metaDescription:
+      "RAG (Retrieval-Augmented Generation) sistemleri: belgelerinizden öğrenen, doğru ve kaynaklı yanıt veren AI. Halüsinasyon riskini azaltın. Teklif alın.",
+    anahtarKelimeler: [
+      "rag",
+      "retrieval augmented generation",
+      "vektör veritabanı",
+      "kurum içi ai",
+      "semantic search",
+    ],
+    ozellikler: [
+      "Belge yükleme (PDF, Word, web, DB)",
+      "Otomatik chunking ve embedding",
+      "Vektör veritabanı (pgvector, Pinecone)",
+      "Anlamsal arama (semantic search)",
+      "Kaynak gösteren yanıtlar (hangı belgeden)",
+      "Çoklu dil desteği",
+      "Web widget veya API erişimi",
+      "Bilgi tabanı yönetim paneli",
+    ],
+    surec: [
+      "1. Veri kaynakları ve erişim analizi",
+      "2. Chunking ve embedding stratejisi",
+      "3. Vektör DB kurulumu + indeksleme",
+      "4. AI yanıtlama + UI entegrasyonu",
+      "5. Test, doğrulama, yayın",
+    ],
+    sss: [
+      {
+        soru: "RAG neden saf ChatGPT'ten daha güvenilir?",
+        cevap:
+          "Saf model bilmediği konuyu uydurabilir (halüsinasyon). RAG'da model SADECE sizin yüklediğiniz belgelerden yanıt üretir; kaynak gösterir. Bu yüzden kurumsal kullanımda RAG tercih edilir.",
+      },
+      {
+        soru: "Verilerim güvende mi?",
+        cevap:
+          "Verileriniz kendi seçtiğiniz veritabanında (kendi sunucunuz veya izole cloud) saklanır. AI model'e kalıcı olarak eğitilmez; sadece sorgu anında bağlam olarak gönderilir.",
+      },
+    ],
+  },
+  {
+    slug: "saas-yazilim-gelistirme",
+    baslik: "SaaS Yazılım Geliştirme",
+    kategori: "web-eticaret",
+    ikon: "Layers",
+    kisaAciklama:
+      "Multi-tenant SaaS ürünleri: abonelik yönetimi, self-servis onboarding, ölçeklenebilir mimari. Fikirden yayına.",
+    metaTitle: "SaaS Yazılım Geliştirme | Multi-Tenant | Abonelik | Sprinter",
+    metaDescription:
+      "SaaS yazılım geliştirme: multi-tenant mimari, abonelik/ödeme, self-servis onboarding, ölçeklendirme. Fikrinizi ürün yapın. Teklif alın.",
+    anahtarKelimeler: [
+      "saas yazılım",
+      "saas geliştirme",
+      "multi tenant mimari",
+      "abonelik yazılımı",
+      "bulut yazılım",
+    ],
+    ozellikler: [
+      "Multi-tenant mimari (veri izolasyonu)",
+      "Abonelik ve plan yönetimi (Stripe/iyzico)",
+      "Kullanıcı kimlik ve yetki (RBAC)",
+      "Self-servis kayıt ve onboarding",
+      "Ödeme, fatura, deneme süresi (trial)",
+      "Admin + tenant dashboard",
+      "API + webhook altyapısı",
+      "Ölçeklenebilir bulut dağıtım (Docker/K8s)",
+    ],
+    surec: [
+      "1. Ürün ve pazar doğrulama",
+      "2. Mimari tasarım (multi-tenant stratejisi)",
+      "3. MVP geliştirme (3-6 ay)",
+      "4. İlk ödeyen müşteriler + geri bildirim",
+      "5. Ölçeklendirme (cache, replica, queue)",
+    ],
+    sss: [
+      {
+        soru: "SaaS geliştirmek ne kadar sürer?",
+        cevap:
+          "MVP için tipik olarak 3-6 ay. İlk yıl product-market fit arayışıdır. Erken ölçeklendirme hatasından kaçının; monolitik başlayıp ihtiyaç olunca mikroservise geçin.",
+      },
+      {
+        soru: "Multi-tenant mu single-tenant mu?",
+        cevap:
+          "Çoğu SaaS için multi-tenant (paylaşılan altyapı, düşük maliyet) doğrudur. Regüle sektörler (sağlık, finans) veya kurumsal müşteriler için single-tenant/isole tenant gerekebilir. Birlikte karar veririz.",
+      },
+    ],
+  },
+  {
+    slug: "api-gelistirme",
+    baslik: "API Geliştirme & Entegrasyon",
+    kategori: "web-eticaret",
+    ikon: "Webhook",
+    kisaAciklama:
+      "REST/GraphQL API geliştirme, üçüncü parti sistemlerle entegrasyon, webhook ve mikroservis. Güvenli ve dokümante.",
+    metaTitle: "API Geliştirme | REST, GraphQL, Webhook | Sprinter",
+    metaDescription:
+      "API geliştirme ve entegrasyon: REST/GraphQL, webhook, mikroservis, üçüncü parti sistemler. Güvenli, dokümante, ölçeklenebilir. Teklif alın.",
+    anahtarKelimeler: [
+      "api geliştirme",
+      "rest api",
+      "graphql",
+      "webhook",
+      "api entegrasyonu",
+    ],
+    ozellikler: [
+      "REST ve GraphQL API tasarımı",
+      "Kimlik doğrulama (JWT, OAuth2, API key)",
+      "Rate limiting ve güvenlik",
+      "Webhook + event-driven yapı",
+      "OpenAPI/Swagger dokümantasyon",
+      "Sürüm yönetimi (versioning)",
+      "Test otomasyonu (unit, integration)",
+      "Performans: cache, pagination, async",
+    ],
+    surec: [
+      "1. İhtiyaç ve uç nokta analizi",
+      "2. API tasarımı + dokümantasyon",
+      "3. Geliştirme + test",
+      "4. Güvenlik denetimi",
+      "5. Yayın + monitoring",
+    ],
+    sss: [
+      {
+        soru: "Mevcut sistemimize API ekleyebilir misiniz?",
+        cevap:
+          "Evet. Mevcut veritabanınız veya yazılımınız üzerine güvenli bir API katmanı ekleyebiliriz. Böylece mobil uygulama, üçüncü parti veya partner entegrasyonları mümkün olur.",
+      },
+    ],
+  },
+  {
+    slug: "e-fatura-entegrasyonu",
+    baslik: "E-Fatura / E-Arşiv Entegrasyonu",
+    kategori: "web-eticaret",
+    ikon: "FileText",
+    kisaAciklama:
+      "GİB uyumlu e-fatura, e-arşiv, e-İrsaliye entegrasyonu. Sipariş sonrası otomatik fatura kesimi ve muhasebe aktarımı.",
+    metaTitle: "E-Fatura E-Arşiv Entegrasyonu | GİB Uyumlu | Sprinter",
+    metaDescription:
+      "E-fatura, e-arşiv, e-İrsaliye entegrasyonu. GİB uyumlu, otomatik fatura kesimi. Logo, Mikro, Paraşüt, Kolays entegrasyonu. Teklif alın.",
+    anahtarKelimeler: [
+      "e fatura entegrasyonu",
+      "e arşiv",
+      "e irsaliye",
+      "gib e fatura",
+      "fatura otomasyonu",
+    ],
+    ozellikler: [
+      "GİB uyumlu e-Fatura, e-Arşiv, e-İrsaliye",
+      "Otomatik fatura kesimi (sipariş → fatura)",
+      "Muhasebe entegrasyonu (Logo, Mikro, Paraşüt, Kolays)",
+      "Müşteriye otomatik e-posta",
+      "İade/iptal faturası yönetimi",
+      "PDF + XML + e-imza çıktısı",
+      "Toplu fatura oluşturma",
+      "Vergi ve KDV otomasyonu",
+    ],
+    surec: [
+      "1. Mevcut muhasebe ve GİB durum analizi",
+      "2. Özel entegratör seçimi ve API erişimi",
+      "3. Sipariş akışına fatura entegrasyonu",
+      "4. Test (deneme faturaları)",
+      "5. Yayın + eğitim",
+    ],
+    sss: [
+      {
+        soru: "Hangi muhasebe programlarıyla çalışıyor?",
+        cevap:
+          "Logo (İşbaşı, Go, Tiger), Mikro, Paraşüt, Kolays (eski Uyumsoft), BizimHesap ve GİB uyumlu tüm entegratörlerle. Mevcut yazılımınızı koruyarak entegre ediyoruz.",
+      },
+      {
+        soru: "Mali mühür/e-imza gerekli mi?",
+        cevap:
+          "Evet, e-fatura için mali mühür (tüzel) veya e-imza (gerçek) gereklidir. Bu resmi süreçtir; sizin adınıza GİB ve entegratör kayıtlarını yönetebiliyoruz.",
+      },
+    ],
+  },
+  {
+    slug: "devops-cloud-migration",
+    baslik: "DevOps & Cloud Migration",
+    kategori: "mobil-marka",
+    ikon: "Cloud",
+    kisaAciklama:
+      "CI/CD pipeline, konteynerleştirme, bulut taşıma ve altyapı otomasyonu. Güvenilir, ölçeklenebilir dağıtım.",
+    metaTitle: "DevOps & Cloud Migration | Docker, Kubernetes, AWS | Sprinter",
+    metaDescription:
+      "DevOps ve bulut taşıma: CI/CD pipeline, Docker, Kubernetes, AWS/Azure migration. Güvenilir, ölçeklenebilir altyapı. Teklif alın.",
+    anahtarKelimeler: [
+      "devops",
+      "cloud migration",
+      "ci cd pipeline",
+      "docker kubernetes",
+      "bulut taşıma",
+    ],
+    ozellikler: [
+      "CI/CD pipeline (GitHub Actions, GitLab CI)",
+      "Docker konteynerleştirme",
+      "Kubernetes orkestrasyon",
+      "AWS / Azure / GCP migration",
+      "Infrastructure as Code (Terraform)",
+      "Monitoring + logging (Prometheus, Grafana)",
+      "Otomatik backup ve felaket kurtarma",
+      "Maliyet optimizasyonu",
+    ],
+    surec: [
+      "1. Mevcut altyapı denetimi",
+      "2. Hedef mimari ve cloud seçimi",
+      "3. Pipeline + konteyner kurulumu",
+      "4. Kademeli taşıma (sıfır kesinti)",
+      "5. İzleme + optimizasyon",
+    ],
+    sss: [
+      {
+        soru: "Mevcut sunucumdan buluta kesintisiz taşınabilir miyim?",
+        cevap:
+          "Evet. Kademeli (strangler) geçiş stratejisiyle sıfır veya minimal kesintiyle taşırız. Önce yan servisler, sonra ana uygulama; eski sistem paralel çalışırken yeni doğrulanır.",
+      },
+      {
+        soru: "DevOps sürekli bir hizmet mi, tek seferlik mi?",
+        cevap:
+          "Her ikisi. İlk kurulum tek seferli; ancak üretim sistemler için sürekli izleme, güncelleme ve optimizasyon aylık DevOps retaini ile yürütülür.",
+      },
+    ],
+  },
 ];
 
 export const getHizmetBySlug = (slug: string): Hizmet | undefined =>

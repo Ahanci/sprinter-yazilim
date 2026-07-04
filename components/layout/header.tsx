@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/data/site";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { NAV_LINKS, HEADER_NAV_LINKS, SITE } from "@/lib/data/site";
 import { cn } from "@/lib/utils";
+import { getWhatsAppNumber } from "@/lib/utils";
 import { MovingBorder } from "@/components/ui/moving-border";
 
 export function Header() {
@@ -34,7 +35,7 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
+            {HEADER_NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="px-3 py-2 text-sm font-medium text-[var(--body)] hover:text-[var(--foreground)] rounded-lg hover:bg-slate-100 transition-colors">
                 {link.label}
               </Link>
@@ -55,16 +56,22 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-[var(--border)] bg-white">
-          <nav className="mx-auto max-w-7xl px-5 py-4 flex flex-col gap-1">
+        <div className="lg:hidden border-t border-[var(--border)] bg-white shadow-xl max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <nav className="mx-auto max-w-7xl px-5 py-4 pb-28 flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="px-3 py-3 text-base font-medium text-[var(--foreground)] hover:bg-slate-50 rounded-lg">
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="px-4 py-3.5 text-base font-semibold text-[var(--foreground-strong)] hover:bg-slate-100 rounded-xl transition-colors">
                 {link.label}
               </Link>
             ))}
-            <Link href="/iletisim" onClick={() => setOpen(false)} className="mt-2 px-3 py-3 text-base font-semibold text-white bg-[var(--primary)] hover:bg-[var(--foreground-strong)] rounded-lg text-center">
-              Teklif Al →
-            </Link>
+            <div className="mt-4 grid grid-cols-1 gap-2.5">
+              <Link href="/iletisim" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-xl text-center shadow-lg shadow-blue-500/20 transition-all">
+                Teklif Al →
+              </Link>
+              <a href={`https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent("Merhaba Sprinter, web sitenizden yazıyorum.")}`} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-xl text-center shadow-lg shadow-emerald-500/20 transition-all">
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp'tan Yaz
+              </a>
+            </div>
           </nav>
         </div>
       )}
