@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { LeadForm } from "@/components/sections/lead-form";
 import { Mail, MessageCircle, MapPin } from "lucide-react";

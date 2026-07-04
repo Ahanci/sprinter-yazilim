@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { SurecTimeline } from "@/components/sections/surec-timeline";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";

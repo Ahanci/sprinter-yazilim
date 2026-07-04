@@ -1,7 +1,34 @@
 import Link from "next/link";
-import { Building2, Globe, MessageCircle, Users } from "lucide-react";
+import { Building2, MessageCircle } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/lib/data/site";
 import { HIZMETLER } from "@/lib/data/hizmetler";
+
+/** Marka ikonları (lucide marka ikonlarını kaldırdığı için inline SVG). */
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const yil = new Date().getFullYear();
@@ -46,7 +73,7 @@ export function Footer() {
                 className="h-10 w-10 rounded-full bg-slate-800/80 hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 border border-slate-700 hover:border-pink-400 flex items-center justify-center transition-all"
                 aria-label="Instagram"
               >
-                <Globe className="h-4 w-4 text-slate-200" />
+                <InstagramIcon className="h-4 w-4 text-slate-200" />
               </a>
               <a
                 href={`https://facebook.com/${SITE.facebook}`}
@@ -55,7 +82,7 @@ export function Footer() {
                 className="h-10 w-10 rounded-full bg-slate-800/80 hover:bg-blue-600 border border-slate-700 hover:border-blue-400 flex items-center justify-center transition-all"
                 aria-label="Facebook"
               >
-                <Globe className="h-4 w-4 text-slate-200" />
+                <FacebookIcon className="h-4 w-4 text-slate-200" />
               </a>
               <a
                 href={`https://linkedin.com/company/${SITE.linkedin}`}
@@ -64,7 +91,7 @@ export function Footer() {
                 className="h-10 w-10 rounded-full bg-slate-800/80 hover:bg-sky-600 border border-slate-700 hover:border-sky-400 flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
               >
-                <Users className="h-4 w-4 text-slate-200" />
+                <LinkedinIcon className="h-4 w-4 text-slate-200" />
               </a>
             </div>
           </div>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { buildMetadata, jsonLd } from "@/lib/seo/metadata";
 import { GENEL_SSS } from "@/lib/data/sss";
 import { SSSSection } from "@/components/sections/sss-accordion";

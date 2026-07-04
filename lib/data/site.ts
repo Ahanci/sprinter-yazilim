@@ -8,7 +8,9 @@ export const SITE = {
   description:
     "Next.js + Shopify headless, SEO odaklı, AI destekli modern e-ticaret ve dijital ürünler stüdyosu. Kurumsal web, e-ticaret, SEO, reklam ve AI otomasyon.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sprinteryazilim.com",
-  ogImage: "/og-image.png",
+  // Not: Gerçek OG görseli app/opengraph-image.tsx tarafından dinamik üretilir (PNG).
+  // Buradaki değer, manuel metadata için güvenli bir fallbacktir.
+  ogImage: "/logo.svg",
   locale: "tr_TR",
   email: "hello@sprinteryazilim.com",
   phoneDisplay: "(539) 654 04 61",
@@ -21,7 +23,7 @@ export const SITE = {
     city: "İstanbul",
     country: "TR",
   },
-  foundedYear: 2024,
+  foundedYear: 2022,
 } as const;
 
 /**

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Sparkles, Heart, Zap, Target } from "lucide-react";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { SEKTORLER } from "@/lib/data/sektorler";
 import { Card3D } from "@/components/ui/card-3d";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";

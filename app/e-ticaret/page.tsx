@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ShoppingBag,
@@ -10,20 +9,17 @@ import {
   GraduationCap,
   Settings,
   CheckCircle2,
-  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import { getWhatsAppNumber } from "@/lib/utils";
+import { getWhatsAppNumber, cn } from "@/lib/utils";
 import * as Icons from "lucide-react";
 import {
   ENTEGRASYONLAR,
-  ENTEGRASYON_KATEGORI_ETIKET,
   ENTEGRASYON_KATEGORI_SIRASI,
   type Entegrasyon,
   type EntegrasyonKategori,
 } from "@/lib/data/e-ticaret-entegrasyonlar";
 import { buildMetadata, jsonLd } from "@/lib/seo/metadata";
-import { SITE } from "@/lib/data/site";
 import { PaketComparison } from "@/components/sections/paket-comparison";
 import { SSSSection } from "@/components/sections/sss-accordion";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";
@@ -101,6 +97,7 @@ export default function ETicaretPage() {
   const toplamEntegrasyon = ENTEGRASYONLAR.length;
   const toplamPazaryeri = ENTEGRASYONLAR.filter((e) => e.kategori === "pazaryeri").length;
   const toplamOdeme = ENTEGRASYONLAR.filter((e) => e.kategori === "odeme").length;
+  const toplamKargoErp = ENTEGRASYONLAR.filter((e) => e.kategori === "kargo" || e.kategori === "erp").length;
 
   const ldFaq = {
     "@type": "FAQPage",
@@ -173,7 +170,7 @@ export default function ETicaretPage() {
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl">
             <Metric value={`${toplamPazaryeri}+`} label="Pazaryeri" />
             <Metric value={`${toplamOdeme}+`} label="Ödeme Sistemi" />
-            <Metric value="30+" label="Kargo / ERP" />
+            <Metric value={`${toplamKargoErp}+`} label="Kargo / ERP" />
             <Metric value="7/24" label="Mağaza Yönetimi" />
           </div>
 
@@ -511,5 +508,3 @@ function EntegrasyonKart({ entegrasyon }: { entegrasyon: Entegrasyon }) {
     </div>
   );
 }
-
-import { cn } from "@/lib/utils";

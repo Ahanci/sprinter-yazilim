@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="text-center mb-12 md:mb-16">
             <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 mb-4">
-              NEDEN SPREINTER
+              NEDEN SPRINTER
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[var(--foreground)]">
               Modern dijitalin <span className="text-gradient">3 temeli</span>

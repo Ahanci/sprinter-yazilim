@@ -25,6 +25,17 @@ export function CTAWhatsApp({
       <div className="absolute inset-0 bg-grid opacity-10" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-4xl px-5 md:px-8 text-center">
+        {baslik && (
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            {baslik}
+          </h2>
+        )}
+        {altBaslik && (
+          <p className="mt-5 text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto">
+            {altBaslik}
+          </p>
+        )}
+
         {/* CTA — büyük ve görünür */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
           <a

@@ -3,12 +3,20 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Check, type LucideIcon } from "lucide-react";
 import * as Icons from "lucide-react";
-import { HIZMETLER, getHizmetBySlug } from "@/lib/data/hizmetler";
+import { HIZMETLER, getHizmetBySlug, type HizmetKategori } from "@/lib/data/hizmetler";
 import { buildMetadata, jsonLd } from "@/lib/seo/metadata";
 import { SITE } from "@/lib/data/site";
 import { PaketComparison } from "@/components/sections/paket-comparison";
 import { SSSSection } from "@/components/sections/sss-accordion";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";
+
+/** Kategoriye göre ilgili teknoloji vurgusu (her hizmete uygun bağlam). */
+const KATEGORI_TEKNOLOJI: Record<HizmetKategori, string> = {
+  "web-eticaret": "Next.js, React 19 ve Shopify headless",
+  "seo-pazarlama": "Next.js, Google Analytics 4, Search Console ve Schema.org",
+  "ai-otomasyon": "Next.js, OpenAI (GPT) ve Anthropic (Claude) API'leri",
+  "mobil-marka": "Next.js, React Native / Flutter ve modern tasarım sistemleri",
+};
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -118,8 +126,8 @@ export default async function HizmetDetayPage({ params }: PageProps) {
                 <p>
                   <strong className="text-[var(--foreground)]">{hizmet.baslik}</strong>{" "}
                   modern işletmelerin dijital dönüşümünün temel taşlarından biridir.
-                  Sprinter olarak bu hizmeti{" "}
-                  <strong className="text-[var(--foreground)]">Next.js, React 19 ve Shopify headless</strong>{" "}
+                   Sprinter olarak bu hizmeti{" "}
+                  <strong className="text-[var(--foreground)]">{KATEGORI_TEKNOLOJI[hizmet.kategori]}</strong>{" "}
                   gibi güncel teknolojilerle sunuyoruz.
                 </p>
                 <p>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { HIZMETLER, HIZMET_KATEGORI_ETIKETLERI, type HizmetKategori } from "@/lib/data/hizmetler";
 import { HizmetCard } from "@/components/sections/hizmet-card";
 import { CTAWhatsApp } from "@/components/sections/cta-whatsapp";

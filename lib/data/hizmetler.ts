@@ -407,7 +407,7 @@ export const HIZMETLER: Hizmet[] = [
     slug: "meta-reklam-yonetimi",
     baslik: "Meta Reklam Yönetimi (Facebook + Instagram)",
     kategori: "seo-pazarlama",
-    ikon: "Facebook",
+    ikon: "Megaphone",
     kisaAciklama:
       "Facebook ve Instagram reklamlarında marka bilinirliği, trafik ve satış odaklı kampanya yönetimi.",
     metaTitle:
