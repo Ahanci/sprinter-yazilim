@@ -2,11 +2,11 @@
 
 import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
-import { getWhatsAppNumber, cn } from "@/lib/utils";
+import { getWhatsAppWaMe, cn } from "@/lib/utils";
 
 export function WhatsAppFloat() {
   const [visible, setVisible] = useState(false);
-  const wa = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent("Merhaba Sprinter, web sitenizden yazıyorum. Detaylı bilgi almak istiyorum.")}`;
+  const wa = `https://wa.me/${getWhatsAppWaMe()}?text=${encodeURIComponent("Merhaba Sprinter, web sitenizden yazıyorum. Detaylı bilgi almak istiyorum.")}`;
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 600);

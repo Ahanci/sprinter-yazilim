@@ -11,7 +11,7 @@ import {
   CheckCircle2,
   type LucideIcon,
 } from "lucide-react";
-import { getWhatsAppNumber, cn } from "@/lib/utils";
+import { getWhatsAppWaMe, cn } from "@/lib/utils";
 import * as Icons from "lucide-react";
 import {
   ENTEGRASYONLAR,
@@ -93,7 +93,7 @@ const KATEGORI_BASLIK_DETAY: Record<EntegrasyonKategori, { baslik: string; acikl
 };
 
 export default function ETicaretPage() {
-  const waLink = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent("Merhaba Sprinter, e-ticaret entegrasyonları hakkında bilgi almak istiyorum.")}`;
+  const waLink = `https://wa.me/${getWhatsAppWaMe()}?text=${encodeURIComponent("Merhaba Sprinter, e-ticaret entegrasyonları hakkında bilgi almak istiyorum.")}`;
   const toplamEntegrasyon = ENTEGRASYONLAR.length;
   const toplamPazaryeri = ENTEGRASYONLAR.filter((e) => e.kategori === "pazaryeri").length;
   const toplamOdeme = ENTEGRASYONLAR.filter((e) => e.kategori === "odeme").length;

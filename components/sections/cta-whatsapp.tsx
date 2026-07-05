@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
-import { getWhatsAppNumber } from "@/lib/utils";
+import { getWhatsAppWaMe } from "@/lib/utils";
 
 interface CTAWhatsAppProps {
   baslik?: string;
@@ -14,7 +14,7 @@ export function CTAWhatsApp({
   mesaj,
 }: CTAWhatsAppProps) {
   const waMessage = mesaj ?? "Merhaba Sprinter, ücretsiz keşif görüşmesi için randevu almak istiyorum.";
-  const wa = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(waMessage)}`;
+  const wa = `https://wa.me/${getWhatsAppWaMe()}?text=${encodeURIComponent(waMessage)}`;
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">

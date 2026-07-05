@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { NAV_LINKS, HEADER_NAV_LINKS, SITE } from "@/lib/data/site";
-import { cn } from "@/lib/utils";
-import { getWhatsAppNumber } from "@/lib/utils";
+import { cn, getWhatsAppWaMe } from "@/lib/utils";
 import { MovingBorder } from "@/components/ui/moving-border";
 
 export function Header() {
@@ -67,7 +66,7 @@ export function Header() {
               <Link href="/iletisim" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-xl text-center shadow-lg shadow-blue-500/20 transition-all">
                 Teklif Al →
               </Link>
-              <a href={`https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent("Merhaba Sprinter, web sitenizden yazıyorum.")}`} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-xl text-center shadow-lg shadow-emerald-500/20 transition-all">
+              <a href={`https://wa.me/${getWhatsAppWaMe()}?text=${encodeURIComponent("Merhaba Sprinter, web sitenizden yazıyorum.")}`} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-xl text-center shadow-lg shadow-emerald-500/20 transition-all">
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp'tan Yaz
               </a>

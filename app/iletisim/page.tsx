@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { LeadForm } from "@/components/sections/lead-form";
 import { Mail, MessageCircle, MapPin } from "lucide-react";
 import { SITE } from "@/lib/data/site";
-import { formatPhoneTR, getWhatsAppNumber } from "@/lib/utils";
+import { formatPhoneTR, getWhatsAppNumber, getWhatsAppWaMe } from "@/lib/utils";
 
 export const metadata = buildMetadata({
   title: "İletişim & Teklif Al",
@@ -12,7 +12,7 @@ export const metadata = buildMetadata({
 });
 
 export default function IletisimPage() {
-  const wa = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent("Merhaba Sprinter, teklif almak istiyorum.")}`;
+  const wa = `https://wa.me/${getWhatsAppWaMe()}?text=${encodeURIComponent("Merhaba Sprinter, teklif almak istiyorum.")}`;
 
   return (
     <>

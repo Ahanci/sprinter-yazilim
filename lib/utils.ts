@@ -11,11 +11,22 @@ export function cn(...inputs: ClassValue[]) {
 
 /**
  * WhatsApp derin linki üretir. Mesajı URL encode eder.
+ * Telefona Türkiye ülke kodunu (90) otomatik ekler — wa.me gereksinimi.
  */
-export function whatsappLink(phone: string, message: string): string {
-  const cleanPhone = phone.replace(/\D/g, "");
+export function whatsappLink(_phone: string, message: string): string {
   const encoded = encodeURIComponent(message);
-  return `https://wa.me/${cleanPhone}?text=${encoded}`;
+  return `https://wa.me/${getWhatsAppWaMe()}?text=${encoded}`;
+}
+
+/**
+ * wa.me için uluslararası formatlı numara üretir (Türkiye: 90 ekler).
+ * Kabul: "5396540461", "05396540461", "905396540461" — hepsi → "905396540461".
+ */
+export function getWhatsAppWaMe(): string {
+  const raw = (process.env.NEXT_PUBLIC_WHATSAPP ?? "5396540461").replace(/\D/g, "");
+  if (raw.startsWith("90")) return raw;
+  if (raw.startsWith("0")) return `9${raw}`;
+  return `90${raw}`;
 }
 
 /**

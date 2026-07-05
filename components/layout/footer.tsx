@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Building2, MessageCircle } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/lib/data/site";
 import { HIZMETLER } from "@/lib/data/hizmetler";
+import { getWhatsAppWaMe } from "@/lib/utils";
 
 /** Marka ikonları (lucide marka ikonlarını kaldırdığı için inline SVG). */
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -58,7 +59,7 @@ export function Footer() {
             {/* Sosyal */}
             <div className="mt-6 flex items-center gap-2.5">
               <a
-                href={`https://wa.me/${SITE.whatsappRaw}`}
+                href={`https://wa.me/${getWhatsAppWaMe()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-slate-800/80 hover:bg-emerald-500 border border-slate-700 hover:border-emerald-400 flex items-center justify-center transition-all"
