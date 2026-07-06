@@ -35,7 +35,16 @@ export function Header() {
 
           <nav className="hidden lg:flex items-center gap-1">
             {HEADER_NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="px-3 py-2 text-sm font-medium text-[var(--body)] hover:text-[var(--foreground)] rounded-lg hover:bg-slate-100 transition-colors">
+              <Link
+                key={link.href}
+                href={link.href}
+                className={
+                  link.href === "/ek-gelir-eticaret"
+                    ? "px-3 py-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 rounded-lg hover:bg-emerald-50 transition-colors inline-flex items-center gap-1.5"
+                    : "px-3 py-2 text-sm font-medium text-[var(--body)] hover:text-[var(--foreground)] rounded-lg hover:bg-slate-100 transition-colors"
+                }
+              >
+                {link.href === "/ek-gelir-eticaret" && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />}
                 {link.label}
               </Link>
             ))}
@@ -58,7 +67,8 @@ export function Header() {
         <div className="lg:hidden border-t border-[var(--border)] bg-white shadow-xl max-h-[calc(100vh-4rem)] overflow-y-auto">
           <nav className="mx-auto max-w-7xl px-5 py-4 pb-28 flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="px-4 py-3.5 text-base font-semibold text-[var(--foreground-strong)] hover:bg-slate-100 rounded-xl transition-colors">
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className={link.href === "/ek-gelir-eticaret" ? "px-4 py-3.5 text-base font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-xl transition-colors inline-flex items-center gap-2" : "px-4 py-3.5 text-base font-semibold text-[var(--foreground-strong)] hover:bg-slate-100 rounded-xl transition-colors"}>
+                {link.href === "/ek-gelir-eticaret" && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />}
                 {link.label}
               </Link>
             ))}

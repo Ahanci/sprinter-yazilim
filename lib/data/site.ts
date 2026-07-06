@@ -33,6 +33,7 @@ export const NAV_LINKS = [
   { label: "Anasayfa", href: "/" },
   { label: "Hizmetler", href: "/hizmetler" },
   { label: "E-Ticaret", href: "/e-ticaret" },
+  { label: "Ek Gelir", href: "/ek-gelir-eticaret" },
   { label: "Sektörler", href: "/sektorler" },
   { label: "Teknolojiler", href: "/teknolojiler" },
   { label: "Referanslar", href: "/referanslar" },
@@ -49,6 +50,7 @@ export const NAV_LINKS = [
 export const HEADER_NAV_LINKS = [
   { label: "Hizmetler", href: "/hizmetler" },
   { label: "E-Ticaret", href: "/e-ticaret" },
+  { label: "Ek Gelir", href: "/ek-gelir-eticaret" },
   { label: "Sektörler", href: "/sektorler" },
   { label: "Teknolojiler", href: "/teknolojiler" },
   { label: "Referanslar", href: "/referanslar" },

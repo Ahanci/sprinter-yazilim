@@ -30,6 +30,22 @@ export default function HomePage() {
     <>
       <Hero />
 
+      {/* Ek Gelir promosyon banner */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white">
+        <div className="absolute inset-0 bg-grid opacity-10" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <Sparkles className="h-6 w-6 shrink-0 text-emerald-100" />
+            <p className="text-base md:text-lg font-semibold">
+              Evden e-ticarete başla, düzenli ek gelir kazan — sıfır tecrübeyle, uçtan uca kurulum dahil.
+            </p>
+          </div>
+          <Link href="/ek-gelir-eticaret" className="shrink-0 inline-flex items-center gap-2 rounded-full bg-white text-emerald-700 hover:bg-emerald-50 font-bold text-sm h-11 px-6 shadow-lg transition-colors">
+            Hemen İncele <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       <section className="relative bg-white py-10 border-y border-[var(--border)]">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-[var(--muted)]">
