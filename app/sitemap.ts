@@ -14,6 +14,7 @@ const STATIK_SAYFALAR = [
   "/surec",
   "/hakkimizda",
   "/blog",
+  "/ek-gelir-eticaret",
   "/sss",
   "/iletisim",
 ];
